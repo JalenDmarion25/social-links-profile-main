@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+
+}
+
+:root{
+    --backgroundMain: hsl(0, 0%, 8%);
+    --backgroundCard: hsl(0, 0%, 12%);
+    --buttonColor: hsl(0, 0%, 20%);
+    --buttonHoverColor: hsl(75, 94%, 57%);
+    --headerColor: hsl(0, 0%, 100%);
+}
+
+body,
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--backgroundMain);
+}
+
+div.card-container{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundCard);
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    padding: 25px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.card-container h1{
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+}
+
+div.card-container h2{
+    font-size: 12px;
+    color: var(--buttonHoverColor);
+}
+
+div.card-container span{
+    font-size: 12px;
+    margin: 15px 0;
+    color: lightgray;
+}
+
+
+div.card-container img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+div.card-container button{
+    background-color: var(--buttonColor);
+    width: fit-content;
+    border: 0;
+    outline: 0;
+    width: 80%;
+    border-radius: 5px;
+    padding: 15px 0px;
+    cursor: pointer;
+    color: var(--headerColor);
+    margin: 10px 0;
+    font-weight: 600;
+
+}
+
+div.card-container button:hover{
+    background-color: var(--buttonHoverColor);
+    color: var(--backgroundMain);
+    transition: all .5s;
+}
+
+@media (max-width: 600px) {
+    div.card-container{
+        width: 330px;
+        height: fit-content;
+        padding: 25px 0;
+
+    }
+
+    div.card-container button{
+        background-color: var(--buttonColor);
+        width: fit-content;
+        border: 0;
+        outline: 0;
+        width: 80%;
+        border-radius: 5px;
+        padding: 10px 0px;
+        cursor: pointer;
+        color: var(--headerColor);
+        margin: 8px 0;
+        font-weight: 600;
+    
+    }
+}
